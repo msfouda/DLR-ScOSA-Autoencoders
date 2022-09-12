@@ -37,9 +37,10 @@ def compress_patches(patches_img, imgs, convolutional_decoder_model):
 # load the model
 convolutional_decoder_model = tf.keras.models.load_model('biros_dec_mse_256.h5')
 
-filename = 'compressed_patchs.npy'
+filename = 'compressed_patchs.npz'
 
-patches_img = np.load(filename)
+patches_img = np.load(filename)['arr_0']
+set_trace()
 print(f"{filename} shape:", patches_img.shape)
 
 # make emty array to store the compressed patches same size as patches_img

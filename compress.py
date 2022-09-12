@@ -54,4 +54,4 @@ compress_patches(patches_img, compressed_patchs, convolutional_encoder_model)
 # get a prediction for some values in the dataset
 # predicted = convolutional_model.predict(img)
 
-np.save("compressed_patchs.npy", compressed_patchs)
+np.savez_compressed("compressed_patchs", compressed_patchs)
