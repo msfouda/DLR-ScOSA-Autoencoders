@@ -17,10 +17,7 @@ def prepare_dataset(filename, imgs):
 
     for i in range(patches_img.shape[0]):
         for j in range(patches_img.shape[1]):
-            # set_trace()
             single_patch_img = patches_img[i, j, :, :]
-            # if not cv2.imwrite('patches/images_5000/' + 'image_' + '_'+ str(i)+str(j)+'.jpg', single_patch_img):
-            #     raise Exception("Could not write the image")
             imgs.append(single_patch_img.reshape(256, 256, 1))
 
 

@@ -2,10 +2,6 @@
 # python quantize.py --dataset ../datasets/dog-breeds \
 # 	--model models/dogbreed_model.h5 --tflite-model models/dogbreed_model.tflite
 
-# # import the necessary packages
-# from pyimagesearch.preprocessing import ImageToArrayPreprocessor
-# from pyimagesearch.preprocessing import AspectAwarePreprocessor
-# from pyimagesearch.datasets import SimpleDatasetLoader
 from imutils import paths
 from tensorflow.keras.applications.imagenet_utils import preprocess_input
 import tensorflow as tf

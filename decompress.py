@@ -28,8 +28,6 @@ def compress_patches(patches_img, imgs, convolutional_decoder_model):
         for j in range(patches_img.shape[1]):
             # set_trace()
             single_patch_img = patches_img[i, j, :, :, :]
-            # single_patch_img = single_patch_img.reshape(1, 256, 256, 1)
-            # set_trace()
             # get the encoder ouput
             decoded = convolutional_decoder_model.predict(single_patch_img.reshape(1, 32, 32, 256))
             # append to tuple

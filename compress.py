@@ -28,8 +28,6 @@ def compress_patches(patches_img, imgs, convolutional_encoder_model):
         for j in range(patches_img.shape[1]):
             # set_trace()
             single_patch_img = patches_img[i, j, :, :]
-            # if not cv2.imwrite('patches/images_5000/' + 'image_' + '_'+ str(i)+str(j)+'.jpg', single_patch_img):
-            #     raise Exception("Could not write the image")
             single_patch_img = single_patch_img.reshape(1, 256, 256, 1)
             # set_trace()
             # get the encoder ouput
@@ -39,7 +37,6 @@ def compress_patches(patches_img, imgs, convolutional_encoder_model):
 
 
 # load the model
-# convolutional_model = tf.keras.models.load_model('biros_model_mse_256.h5')
 convolutional_encoder_model = tf.keras.models.load_model('biros_enc_mse_256.h5')
 
 filename = 'patches_img_test.npy'
